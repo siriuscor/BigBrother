@@ -1,0 +1,22 @@
+{
+  "name": "node-bigbrother",
+  "version": "0.1.0",
+  "description": "BIG BROTHER IS WATCHING YOU!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "sirius",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/siriuscor/BigBrother.git"
+  },
+  "keywords": [
+    "monitor"
+  ],
+  "bugs": {
+    "url": "https://github.com/siriuscor/BigBrother/issues"
+  },
+  "homepage": "https://github.com/siriuscor/BigBrother#readme"
+}
