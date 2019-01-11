@@ -1,0 +1,13 @@
+[
+    {
+        "name" : "nordic-demo",
+        "cwd"  : "/Users/liyi/Projects/BigBrother/test",
+        "start": "node test.js",
+        "mode" : "fork",
+        "stdout": "/tmp/test-out.log",
+        "stderr": "/tmp/test-err.log",
+        "logsize": "10MB",
+        "env":   { "NODE_ENV": "development" },
+        "order": 0
+    }
+]
