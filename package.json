@@ -20,15 +20,14 @@
   },
   "homepage": "https://github.com/siriuscor/BigBrother#readme",
   "dependencies": {
-    "axon": "^2.0.3",
     "axon-rpc": "0.0.3",
     "cli-table": "^0.3.1",
-    "co": "^4.6.0",
     "commander": "^2.19.0",
-    "nssocket": "^0.6.0",
     "pidusage": "^2.0.17",
     "pretty-bytes": "^5.1.0",
-    "ps-node": "^0.1.6",
     "winston": "^3.1.0"
+  },
+  "bin": {
+    "bb": "./bin/bb"
   }
 }

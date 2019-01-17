@@ -5,13 +5,11 @@ watch your process and keep then running
 
 # features
 * log file size control
-* readable config file
-* including fork mode and monitor mode
-* start order control
+* readable config file(not yet)
+* including fork mode and monitor mode(not yet)
+* start order control(not yet)
 * cli
-* make startup
-* docker image
-* plugin mode
+* make startup(not yet)
 
 # install
 ```
@@ -27,6 +25,6 @@ npm install node-bigbrother
 
 * stop 
 
-    ```bb stop process_name```
+    ```bb stop process_id```
 
 

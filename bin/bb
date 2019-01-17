@@ -1,13 +1,13 @@
 #!/usr/bin/env node
 const program = require('commander');
 const pkg = require('../package.json');
-const consts = require('./consts');
+const consts = require('../lib/consts');
 const fs = require('fs');
 const path = require('path');
 const { execSync, spawn } = require('child_process');
-var axon = require('./axon');
+var axon = require('../lib/axon');
 var rpc = require('axon-rpc');
-const client = require('./client');
+const client = require('../lib/client');
 
 program.version(pkg.version);
 
@@ -74,18 +74,17 @@ function pingDaemon(cb) {
 function startDaemon() {
     const out = fs.openSync(path.resolve(consts.LOG_PATH, 'bb-out.log'), 'a');
     const err = fs.openSync(path.resolve(consts.LOG_PATH, 'bb-err.log'), 'a');
-    var daemon_file = path.resolve(path.dirname(module.filename), 'bb.js');
+    var daemon_file = path.resolve(path.dirname(module.filename), '../index.js');
     const server = spawn(process.execPath, [daemon_file], {
         detached: true,
         stdio: ['ignore', out, err]
-        // stdio: 'inherit' //debug
     });
     server.unref();
 }
 
 pingDaemon((started) => {
     if (!started) {
-        // console.log('start daemon');
+        console.log('Big Brother is watching');
         startDaemon();
     }
 

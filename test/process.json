@@ -4,9 +4,8 @@
         "cwd"  : "/Users/liyi/Projects/BigBrother/test",
         "start": "node test.js",
         "mode" : "fork",
-        "stdout": "/tmp/test-out.log",
-        "stderr": "/tmp/test-err.log",
-        "logsize": "10MB",
+        "stdout": { "filename": "/tmp/test-out.log", "maxsize": 10240 },
+        "stderr": { "filename": "/tmp/test-err.log", "maxsize": 10240 },
         "env":   { "NODE_ENV": "development" },
         "order": 0
     }
