@@ -33,4 +33,5 @@ const logger = createLogger({
 setInterval(() => {
     console.log('running');
     console.error('error log 1');
+    console.log(process.env);
 }, 100);

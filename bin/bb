@@ -18,18 +18,23 @@ program
     .action(client.list);
 
 program
-    .command('start [id_or_file]')
-    .description('start process or file')
+    .command('load [file]')
+    .description('load process config file, json or js')
+    .action(client.load);
+
+program
+    .command('start [id_or_name]')
+    .description('start process by id or name')
     .action(client.start);
 
 program
-    .command('stop [id]')
-    .description('stop process')
+    .command('stop [id_or_name]')
+    .description('stop process by id or name')
     .action(client.stop);
 
 program
-    .command('restart [id]')
-    .description('restart process')
+    .command('restart [id_or_name]')
+    .description('restart process by id or name')
     .action(client.restart);
 
 program
