@@ -14,6 +14,7 @@ program.version(pkg.version);
 program
     .command('ls')
     .alias('l')
+    .option('--json', 'Display processes in json format')
     .description('list all processes')
     .action(client.list);
 
