@@ -78,12 +78,10 @@ function pingDaemon(cb) {
 }
 
 function startDaemon() {
-    const out = fs.openSync(path.resolve(consts.LOG_PATH, 'bb-out.log'), 'a');
-    const err = fs.openSync(path.resolve(consts.LOG_PATH, 'bb-err.log'), 'a');
     var daemon_file = path.resolve(path.dirname(module.filename), '../index.js');
     const server = spawn(process.execPath, [daemon_file], {
         detached: true,
-        stdio: ['ignore', out, err]
+        stdio: 'ignore'
     });
     server.unref();
 }
