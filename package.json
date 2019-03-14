@@ -1,6 +1,6 @@
 {
   "name": "node-bigbrother",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "description": "BIG BROTHER IS WATCHING YOU!",
   "main": "index.js",
   "scripts": {
