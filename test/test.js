@@ -1,37 +1,12 @@
+// function tt() {
+//   var args = Array.prototype.slice.call(arguments);
+//   console.log(args.map((i)=> {return JSON.stringify(i);}).join(' '));
+// }
 
-const { createLogger, format, transports } = require('winston');
-const winston = require('winston');
+// tt(1,2,3,4, {a:1});
 
-const logger = createLogger({
-  format: format.combine(
-    format.timestamp(),
-    format.printf(info => {
-        return `${info.timestamp} [${info.level}]: ${info.message}`;
-    })
-  ),
-//   transports: [new transports.Console({
-//     level: 'info'
-//   }),
-//   new transports.Console({
-//     level: 'error'
-//   })]
-});
-// logger.add(new transports.Console({level:'info'}));
-// // info: test message my string {}
-// // logger.log('info', 'test message %s', 'my string');
-// logger.info('something');
-// logger.error('error');
-
-
-// info: test message 123 {}
-// logger.log('info', 'test message %d', 123);
-
-// info: test message first second {number: 123}
-// logger.log('info', 'test message %s, %s', 'first', 'second', { number: 123 });
-
-
+let i = 0;
 setInterval(() => {
-    console.log('running');
-    console.error('error log 1');
-    console.log(process.env);
-}, 100);
+  console.log(`log ${i} ${new Date()}`);
+  console.error(`error ${i} ${new Date()}`);
+}, 1000);
