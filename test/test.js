@@ -34,14 +34,14 @@ function start() {
   running['logger'] = new_logger;
   // console.log('replace logger with ', new_logger.id);
 
-  // if (old_logger) {
-  //   old_logger.close();
-  //   console.log('close old logger', old_logger.id);
-  // }
+  if (old_logger) {
+    old_logger.close();
+    console.log('close old logger', old_logger.id);
+  }
   let proc = spawn('yes', [], {stdio: ['ignore', 'pipe', 'pipe']});
   proc.stdout.on('data', () => {
     // console.log('logger with ', running['logger'].id);
-    for(let i = 0; i < 10; i ++)
+    for(let i = 0; i < 20; i ++)
     running['logger'].info('keep logging long message' + '~'.repeat(1000));
   });
   running['proc'] = proc;
