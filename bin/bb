@@ -9,7 +9,7 @@ var axon = require('../lib/axon');
 var rpc = require('axon-rpc');
 const client = require('../lib/client');
 
-program.version(pkg.version);
+program.version(pkg.version, '-v, --version', 'output the current version');
 
 program
     .command('ls')
@@ -46,6 +46,7 @@ program
 program.command('*')
     .action(function() {
         console.log('Command not found');
+        program.help();
     });
 
 if (process.argv.length == 2) {
